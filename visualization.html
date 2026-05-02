@@ -2,7 +2,7 @@
 
     <nav>
         <ul>
-            <li></li><a href="index.html">Go to Index Page</a></li>
+            <li><a href="index.html">Go to Index Page</a></li>
             <li><a href="visualization.html">Go to Visualization Page</a></li>
             <li><a href="document.html">Go to Document Page</a></li>
         </ul>
@@ -20,15 +20,15 @@
         </body>
     </head>
     <hr>
-    <div id="observablehq-viewof-filteredData-956f4b9c"></div>
-    <p>Credit: <a href="https://observablehq.com/d/805e2fcd10a70c02@36">Visualization Final Project by Visualizing Info</a></p>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <div id="observable-container"></div>
     <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/805e2fcd10a70c02@36.js?v=4";
-    new Runtime().module(define, name => {
-        if (name === "viewof filteredData") return new Inspector(document.querySelector("#observablehq-viewof-filteredData-956f4b9c"));
-        return ["chart"].includes(name);
+        import {Runtime, Inspector} from "https://observablehq.com/d/805e2fcd10a70c02@36";
+        import notebook from "https://observablehq.com/d/805e2fcd10a70c02@36";
+        new Runtime().module(notebook, name => {
+            if (name === "chart") { // Change "chart" to the name of your specific D3 cell
+            return new Inspector(document.querySelector("#observable-container"));
+            }
         });
-        </script>
+    </script>
+
 </html>
