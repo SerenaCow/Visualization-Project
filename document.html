@@ -38,19 +38,25 @@
             having a tall y-axis with the genre spread across a long x-axis.</p>
         
         <h1 style="color: lightpurple;">Data Source</h1>
-        <p>The data for this visualization was sourced from the genre-summary dataset, 
+        <p>The data for this visualization was sourced from the genre_summary dataset from the
+            "Streaming Content Catalog: Netflix, Prime, Disney+" notebook on Kaggle, 
             which contains information about movies genres, the amount of titles, their budgets, 
             awards, hours watched by millions, and ratings. I chose thise dataset because
             it provides an idea of how a movie performs across different genres 
             based on their budget. I wanted to answer the question of which genres have the 
             highest ratings relative to their budget.</p>
+        <h6 style="color: lightpurple;">Source: 
+            <a href="https://www.kaggle.com/datasets/meruvakodandasuraj/streaming-content-catalog-netflix-prime-disney?select=genre_summary.csv">Kaggle</a></h6>
         
         <h1 style="color: lightpurple;">Early Design Decisions</h1>
         <p>In the early stages of my design process, I created a bar chart that included all of the 
             genres in the filter. I quickly realized that this was not the best way to display the data 
             because it was difficult to compare the genres with so many variables. 
             I decided to decrease the amount of filters to 
-            compare them more easily.</p>
+            compare them more easily. I also changed the color of the bars
+            and added labels for the x and y axes. Although I was unable to figure out
+            how to label the x-axis to match the filters. I included a snippet of the filter names
+            that correspond with each the variable on the x-axis.</p>
 
             <p align="center">
                 <img src="version 1.png" alt="Version 1" width="700">
@@ -61,10 +67,12 @@
                 <img src="filters orig.png" alt="Original Filters" width="700">
             </p>
             <h4 style="color: lightpurple;">Original Filters</h4>
-            <p>In the original filters, there were 6 filters to choose from. I did came to the
+            <p>In the original filters, there were 6 filters to choose from. I came to the
                 conclusion that the hours watched by millions filter and the awards filter
                 were not necessary to include in the visualization. I decided to remove those filters
-                to make the visualization easier to read.</p>
+                to make the visualization easier to read. I did keep the total titles filter 
+                as I thought it may be interesting to see the amoung of movies
+                in a genre compared to their average budget and ratings.</p>
 
             <p align="center">
                 <img src="hours.png" alt="Hours Watched" width="700">
