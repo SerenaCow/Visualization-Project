@@ -21,14 +21,5 @@
     </head>
     <hr>
     <div id="observable-container"></div>
-    <script type="module">
-        import {Runtime, Inspector} from "https://observablehq.com/d/805e2fcd10a70c02@36";
-        import notebook from "https://observablehq.com/d/805e2fcd10a70c02@36";
-        new Runtime().module(notebook, name => {
-            if (name === "chart") { // Change "chart" to the name of your specific D3 cell
-            return new Inspector(document.querySelector("#observable-container"));
-            }
-        });
-    </script>
-
+    <script src="observable.js"></script>
 </html>
