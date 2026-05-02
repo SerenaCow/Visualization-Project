@@ -19,13 +19,5 @@
         </body>
     </head>
     <hr>
-    <script type="module">
-    import {Runtime, Inspector} from "https://jsdelivr.net";
-    import define from "https://observablehq.com/d/805e2fcd10a70c02";
-    new Runtime().module(define, name => {
-        if (name === "chart") {
-            return new Inspector(document.querySelector("observablehq-chart-container"));
-        }
-        });
-</script>
+    
 </html>
