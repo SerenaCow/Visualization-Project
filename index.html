@@ -24,7 +24,7 @@
     import define from "https://observablehq.com/d/805e2fcd10a70c02";
     new Runtime().module(define, name => {
         if (name === "chart") {
-            return new Inspector(document.querySelector("#observablehq-chart-container"));
+            return new Inspector(document.querySelector("observablehq-chart-container"));
         }
         });
 </script>

@@ -21,4 +21,12 @@
     </body>
     <hr>
     <div id="observablehq-chart-container"></div>
+    <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/1c8e5b9a0c3b2e7d.js?v=3";
+        const runtime = new Runtime();
+        const main = runtime.module(define, name => {
+            if (name === "chart") return new Inspector(document.getElementById("observablehq-chart-container"));
+        });
+    </script>
 </html>
